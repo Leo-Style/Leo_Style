@@ -1,0 +1,184 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    top: 0;
+    right: 0;
+}
+
+
+header{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(../imagenes/fondo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+nav{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 200px;
+    margin-left: 10px;
+
+}
+.bar-btn{
+    font-size: 25px;
+    color: #fff;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.nav-menu{
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 100px;
+    background: rgba(0,0,0,.95);
+    text-align: center;
+    transition: all .5s;
+    z-index: 1001;    
+}
+
+.nav-menu li{
+    display: none;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all .5s;
+}
+
+.nav-menu li a{
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;  
+}
+
+.nav-menu li a.active, .nav-menu li a:hover{
+    color: rgba(234, 190, 63);
+    transition: .3s;
+}
+
+#check{
+    display: none;
+}
+
+#check:checked ~ .nav-menu{
+    height: 100vh;
+}
+
+#check:checked ~ .nav-menu li{
+    display: block;
+}
+
+.banner-text{
+    padding: 0 30px;
+    margin-top: 150px;
+    text-align: center;   
+    color: rgba(234, 190, 63);
+}
+
+.banner-text h1{
+    font-size: 50px;
+    margin-bottom: 30px;    
+}
+
+.button1{
+    font-size: 30px;
+    margin-right: 40px;
+    padding: 10px 30px;
+    background-color: rgba(234, 190, 63);
+    color: #fff;
+    border-radius: 20px;
+}
+
+.button1:hover{
+    background-color: #fff;
+    color: rgba(234, 190, 63);
+    transition: .5s;
+}
+
+.button2{
+    font-size: 28px;
+    margin-right: 40px;
+    padding: 10px 30px;
+    background-color: #fff;
+    color: rgba(234, 190, 63);
+    border-radius: 20px;
+}
+
+.button2:hover{
+    background-color: rgba(234, 190, 63);
+    color: #fff;
+    transition: .5s;
+}
+
+.button3{
+    font-size: 40px;
+    margin-right: 40px;
+    padding: 5px 30px;
+    background-color: rgba(234, 190, 63);
+    color: #fff;
+    border-radius: 20px;
+}
+
+.button3:hover{
+    background-color: #fff;
+    color: rgba(234, 190, 63);
+    transition: .5s;
+}
+
+
+@media screen and (min-width: 768px) {
+    .logo{
+        margin-left: 50px;
+    }
+    nav{
+        height: 100px;        
+    }
+
+    .bar-btn{
+        display: none;
+    }
+
+    .nav-menu{
+        position: relative;
+        height: 100px;
+        top: 0;
+        background: none;
+        transition: none;
+        text-align: right;
+        margin-right: 100px;
+    }
+
+    .nav-menu li{
+        display: inline-block;
+        line-height: 100px;
+        margin: 0 20px;
+        transition: none;
+    }
+
+    .nav-menu li a{
+        font-size: 12px;
+    }
+
+    .banner-text h1{
+        font-size: 70px;
+        margin-bottom: 30px;
+    }
+
+    .banner-text h2{
+        font-size: 20px;
+    }
+    
+}
